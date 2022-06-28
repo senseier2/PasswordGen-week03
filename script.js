@@ -37,6 +37,18 @@ Generate password
   I will need varibles to hold the user inputs
 */
 
+//Generate a password based on the above function call from writePassword
+function generatePassword() {
+
+}
 
 
+//Create prompts for character types as in the User request described
+function charPrompts() {
+  passwordLength = Number(prompt("How many characters will your password have? (Please chose a number between 8 to 128"))
 
+  if(isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
+    alert ("Character length has to be a number, and between 8 - 128. Try Again!");
+    return false;
+  }
+}
