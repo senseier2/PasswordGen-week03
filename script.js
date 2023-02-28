@@ -1,10 +1,16 @@
+// Initial password length
 var passwordLength = 0;
+// Initial character choice array
 var choiceArray = [];
 
 //Arrays used to create password characters
+// symbols
 var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+", ".", "/", "?", ";"];
+// numbers
 var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+// lowercase letters
 var lcaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+// Uppercase letters
 var ucaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 
@@ -33,7 +39,6 @@ function writePassword() {
 
 //Generate a password based on the above function call from writePassword
 function generatePassword() {
-
   var password = "";
   for(var i = 0; i < passwordLength; i++) {
       var randomChar = Math.floor(Math.random() * choiceArray.length);
@@ -53,19 +58,19 @@ function charPrompts() {
     return false;
   }
 
-  if (confirm("Would you like to have lowercase letters in your password")) {
+  if (confirm("Would you like to use lowercase letters")) {
     choiceArray = choiceArray.concat(lcaseArray);
   }
 
-  if (confirm("Would you like to have uppercase letters in your password")) {
+  if (confirm("Would you like to have uppercase letters")) {
     choiceArray = choiceArray.concat(ucaseArray);
   }
 
-  if (confirm("Would you like to have symbols in your password")) {
+  if (confirm("Would you like to use symbols in your passwords")) {
     choiceArray = choiceArray.concat(symbols);
   }
 
-  if (confirm("Would you like to have numbers in your password")) {
+  if (confirm("Would you like to use numbers")) {
     choiceArray = choiceArray.concat(numberArray);
   }
   return true;
