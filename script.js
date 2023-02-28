@@ -26,21 +26,10 @@ function writePassword() {
     passwordText.value = yourPassword;
   } 
   else {
-    passwordTest.value = "";
+    passwordText.value = "";
   }
 }
 
-/*
-Generate password
-  User input a number between 8 and 128. (stored in a varible)
-  list all of the characters possible in an array
-    array lowercase letters
-    array of uppercase letters
-    array of numbers
-    array of symbols
-
-  I will need varibles to hold the user inputs
-*/
 
 //Generate a password based on the above function call from writePassword
 function generatePassword() {
